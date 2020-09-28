@@ -13,6 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// フォーム画面を表示
+Route::get('/', 'IssueController@showForm')->name('form');
