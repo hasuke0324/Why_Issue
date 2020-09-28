@@ -14,4 +14,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 // フォーム画面を表示
-Route::get('/', 'IssueController@showForm')->name('form');
+Route::get('/', 'IssueController@showList')->name('list');
