@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Models\Issue;
 
 class IssueController extends Controller
 {
@@ -13,6 +14,7 @@ class IssueController extends Controller
      */
     public function showList()
     {
-        return view('issue.list');
+        $issues = Issue::all();
+        return view('issue.list', ['issues' => $issues]);
     }
 }
