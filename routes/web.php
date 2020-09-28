@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\HTTP\Controllers\IssueController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,5 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// フォーム画面を表示
-Route::get('/', 'IssueController@showList')->name('list');
+// 課題一覧画面を表示
+Route::get('/', [IssueController::class,'showList'])->name('lists');
