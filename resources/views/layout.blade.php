@@ -14,9 +14,7 @@
     @include('header')
   </header>
   <main>
-    <div class="main__container">
-      @yield('list')
-    </div>
+    @yield('list')
   </main>
   <footer class="fixed__bottom">
     @include('footer')

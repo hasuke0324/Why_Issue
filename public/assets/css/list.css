@@ -106,18 +106,19 @@ h3 {
 }
 .form__group {
   height: auto;
-  padding: 17px;
+  padding: 24px;
+  margin-left: 250px;
 }
 input {
   margin-top: 5px;
 }
 .form__control {
-  display: inline-block;
+  display: block;
   border: 1px solid #cccccc;
   border-radius: 4px;
   height: 48px;
   padding: 0px 16px;
-  width: 100%;
+  width: 80%;
 }
 .btn {
   margin-top: 22px;
@@ -149,11 +150,12 @@ input {
   box-sizing: border-box;
   overflow: hidden;
   text-decoration: none;
+  cursor: pointer;
+  cursor: hand;
 }
 /* エラ〜メッセージ */
-/* リストの方は調整が必要 */
 .text-danger {
   color: #ff0021;
   font-size: 14px;
-  padding: 2px;
+  margin-top: 10px;
 }
