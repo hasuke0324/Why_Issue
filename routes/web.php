@@ -25,3 +25,9 @@ Route::post('/issue/store', [IssueController::class,'exeStore'])->name('store');
 
 // 課題詳細画面を表示
 Route::get('/issue/{id}', [IssueController::class,'showDetail'])->name('show');
+
+// 課題編集画面を表示
+Route::get('/issue/edit/{id}', [IssueController::class,'showEdit'])->name('edit');
+
+// 課題更新
+Route::post('/issue/update', [IssueController::class,'exeUpdate'])->name('update');
