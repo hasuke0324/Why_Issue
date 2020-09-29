@@ -146,6 +146,12 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'goal'=>'目標',
+        'now'=>'現状',
+        'why'=>'課題',
+        'action'=>'行動',
+        'deadline'=>'期限'
+    ],
 
 ];
