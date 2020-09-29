@@ -2,7 +2,7 @@
 @section('title', 'アクション一覧')
 @section('list')
 @if(session('err_msg'))
-  <p class="text-danger">{{ session('err_msg') }}</p>
+<span class="text-danger">{{ session('err_msg') }}</span>
 @endif
 <table class="issue__list">
   <tr>
