@@ -1,6 +1,9 @@
 @extends('layout')
 @section('title', 'アクション一覧')
 @section('list')
+@if(session('err_msg'))
+  <p class="text-danger">{{ session('err_msg') }}</p>
+@endif
 <table class="issue__list">
   <tr>
     <th>No.</th>
@@ -11,7 +14,7 @@
   @foreach($issues as $issue)
   <tr>
     <td>{{ $issue->id }}</td>
-    <td>{{ $issue->goal }}</td>
+    <td><a href="/issue/{{ $issue->id }}" class="show__link">{{ $issue->goal }}</a></td>
     <td>{{ $issue->action }}</td>
     <td>{{ $issue->deadline }}</td>
   </tr>

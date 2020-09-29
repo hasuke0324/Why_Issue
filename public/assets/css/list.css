@@ -16,6 +16,9 @@ a {
   color: #f8fafc;
   font-size: 15px;
 }
+.show__link {
+  color: #3490dc;
+}
 .header__links {
   list-style: none;
   display: flex;
@@ -49,4 +52,33 @@ footer {
   text-align: center;
   line-height: 36px;
   color: #f8fafc;
+}
+
+main {
+  position: relative;
+}
+.detail__list {
+  position: absolute;
+    left: 250px;
+    top: 30px;
+}
+h2 {
+  font-weight: bold;
+  color: #444444;
+  font-size: 40px;
+  padding-bottom: 10px;
+}
+.date {
+  color: #CCCCCC;
+}
+.detail__content {
+  padding-top: 30px;
+  font-size: 20px;
+  color: #444444;
+}
+
+.text-danger {
+  color: red;
+  padding-left: 20px;
+  padding-bottom: 5px;
 }
