@@ -110,4 +110,25 @@ class IssueController extends Controller
         \Session::flash('err_msg', '課題を更新しました');
         return redirect(route('lists'));
     }
+    /**
+     * 課題を削除する
+     * @param int $id
+     * @return View
+     */
+    public function exeDelete($id)
+    {
+        if (empty($id)) {
+            \Session::flash('err_msg', 'データがありません');
+            return redirect(route('lists'));
+        }
+        try {
+            // 課題を削除
+            Issue::destroy($id);
+        } catch(\Throwable $e) {
+            abort(500);
+        }
+
+        \Session::flash('err_msg', '削除しました');
+        return redirect(route('lists'));
+    }
 }

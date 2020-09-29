@@ -31,3 +31,6 @@ Route::get('/issue/edit/{id}', [IssueController::class,'showEdit'])->name('edit'
 
 // 課題更新
 Route::post('/issue/update', [IssueController::class,'exeUpdate'])->name('update');
+
+// 課題削除
+Route::post('/issue/delete{id}', [IssueController::class,'exeDelete'])->name('delete');
