@@ -11,6 +11,7 @@
       <th>目標</th>
       <th>アクション</th>
       <th>期限</th>
+      <th></th>
     </tr>
     @foreach($issues as $issue)
     <tr>
@@ -18,6 +19,7 @@
       <td><a href="/issue/{{ $issue->id }}" class="show__link">{{ $issue->goal }}</a></td>
       <td>{{ $issue->action }}</td>
       <td>{{ $issue->deadline }}</td>
+      <td><button type="button" class="edit__btn" onclick="location.href='/issue/edit/{{ $issue->id }}'">編集</button></td>
     </tr>
     @endforeach
   </table>
