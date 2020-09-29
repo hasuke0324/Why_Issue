@@ -14,5 +14,8 @@ use App\HTTP\Controllers\IssueController;
 |
 */
 
-// 課題一覧画面を表示
+// アクション一覧画面を表示
 Route::get('/', [IssueController::class,'showList'])->name('lists');
+
+// 課題詳細画面を表示
+Route::get('/issue/{id}', [IssueController::class,'showDetail'])->name('show');
