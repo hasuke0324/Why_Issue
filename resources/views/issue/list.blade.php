@@ -17,8 +17,8 @@
     @foreach($issues as $issue)
     <tr>
       <td>{{ $issue->id }}</td>
-      <td><a href="/issue/{{ $issue->id }}" class="show__link">{{ $issue->goal }}</a></td>
-      <td>{{ $issue->action }}</td>
+      <td nowrap class="list__goal"><a href="/issue/{{ $issue->id }}" class="show__link">{{ $issue->goal }}</a></td>
+      <td nowrap class="list__action">{{ $issue->action }}</td>
       <td>{{ $issue->deadline }}</td>
       <td><button type="button" class="btn__edit" onclick="location.href='/issue/edit/{{ $issue->id }}'">編集</button></td>
       <form method="POST" action="{{ route('delete', $issue->id) }}" onSubmit="return checkDelete()">
