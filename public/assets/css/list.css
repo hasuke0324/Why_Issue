@@ -51,10 +51,11 @@ footer {
 /* list部分 */
 .issue__list {
   margin: 0 auto;
-  width: 96%;
+  width: 93%;
   height: auto;
   text-align: center;
   font-size: 15px;
+  table-layout: fixed;
 }
 .issue__list th {
   padding: 20px;
@@ -63,7 +64,12 @@ footer {
   color: #444444;
 }
 .issue__list td {
-  padding: 15px;
+  padding: 10px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+.list__goal, .list__action {
+  text-align: left;
 }
 .btn__edit {
   background-color: #3490dc;
@@ -84,7 +90,7 @@ footer {
   color: #444444;
   font-size: 14px;
   font-weight: bold;
-  min-height: 40px;
+  min-height: 37px;
   padding: 1px 20px;
   border-radius: 4px;
   border: 1px solid #cccccc;
