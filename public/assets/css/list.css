@@ -51,7 +51,7 @@ footer {
 /* list部分 */
 .issue__list {
   margin: 0 auto;
-  width: 93%;
+  width: 90%;
   height: auto;
   text-align: center;
   font-size: 15px;
@@ -68,7 +68,7 @@ footer {
 	overflow:hidden;
 	text-overflow:ellipsis;
 }
-.list__goal, .list__action {
+.list__goal, .list__now, .list__why, .list__action {
   text-align: left;
 }
 .btn__edit {

@@ -7,8 +7,9 @@
 <div class="main__container">
   <table class="issue__list">
     <tr>
-      <th>No.</th>
       <th>目標</th>
+      <th>現状</th>
+      <th>課題</th>
       <th>アクション</th>
       <th>期限</th>
       <th></th>
@@ -16,8 +17,9 @@
     </tr>
     @foreach($issues as $issue)
     <tr>
-      <td>{{ $issue->id }}</td>
       <td nowrap class="list__goal"><a href="/issue/{{ $issue->id }}" class="show__link">{{ $issue->goal }}</a></td>
+      <td nowrap class="list__now">{{ $issue->now }}</td>
+      <td nowrap class="list__why">{{ $issue->why }}</td>
       <td nowrap class="list__action">{{ $issue->action }}</td>
       <td>{{ $issue->deadline }}</td>
       <td><button type="button" class="btn__edit" onclick="location.href='/issue/edit/{{ $issue->id }}'">編集</button></td>
