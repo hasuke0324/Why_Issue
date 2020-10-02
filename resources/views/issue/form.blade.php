@@ -18,7 +18,6 @@
                         autocomplete="off"
                         @change="onChange1"
                         v-on:keydown.enter.exact.prevent
-                        v-on:keyup.enter.exact="onChange1"
                     >
                 @if ($errors->has('goal'))
                     <div class="text-danger">
@@ -39,7 +38,6 @@
                         autocomplete="off"
                         @change="onChange2"
                         v-on:keydown.enter.exact.prevent
-                        v-on:keyup.enter.exact="onChange2"
                     >
                 @if ($errors->has('now'))
                     <div class="text-danger">
@@ -60,7 +58,6 @@
                         autocomplete="off"
                         @change="onChange3"
                         v-on:keydown.enter.exact.prevent
-                        v-on:keyup.enter.exact="onChange3"
                     >
                 @if ($errors->has('why'))
                     <div class="text-danger">
@@ -81,7 +78,6 @@
                         autocomplete="off"
                         @change="onChange4"
                         v-on:keydown.enter.exact.prevent
-                        v-on:keyup.enter.exact="onChange4"
                     >
                 @if ($errors->has('action'))
                     <div class="text-danger">
@@ -100,7 +96,6 @@
                     type="date"
                     @change="onChange5"
                     v-on:keydown.enter.exact.prevent
-                    v-on:keyup.enter.exact="onChange5"
                 >
                 @if ($errors->has('deadline'))
                     <div class="text-danger">
