@@ -28,6 +28,9 @@
             <div class="form__group" v-show="setNow">
                 <h3>それに対して現状は？</h3>
                 <span class="required-tag">必須</span>
+                <transition name="vif">
+                    <span class="text-now" v-if="showNow">これは状況です。</span>
+                </transition>
                     <input
                         id="now"
                         name="now"
@@ -48,6 +51,9 @@
             <div class="form__group" v-show="setWhy">
                 <h3>目標と現状の差はなぜ生まれる？</h3>
                 <span class="required-tag">必須</span>
+                <transition name="vif">
+                    <span class="text-why" v-if="showWhy">これが課題です。</span>
+                </transition>
                     <input
                         id="why"
                         name="why"
@@ -133,6 +139,8 @@ var app = new Vue({
         setAction: false,
         setDeadline: false,
         setBtn: false,
+        showNow: false,
+        showWhy: false,
     },
     methods:{
         onChange1: function (){
@@ -140,17 +148,33 @@ var app = new Vue({
         },
         onChange2: function (){
             this.setWhy = true
+            this.showNow = true
         },
         onChange3: function (){
             this.setAction = true
+            this.showWhy = true
         },
         onChange4: function (){
             this.setDeadline = true
         },
         onChange5: function (){
             this.setBtn = true
-        },
+        }
     }
 });
 </script>
+<style>
+.text-now, .text-why {
+  margin-left: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #3490dc;
+}
+.vif-enter-active, .vif-leave-active {
+  transition: opacity .3s;
+}
+.vif-enter, .vif-leave-to {
+  opacity: 0;
+}
+</style>
 @endsection
