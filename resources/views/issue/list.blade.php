@@ -2,18 +2,18 @@
 @section('title', 'アクション一覧')
 @section('list')
 @if(session('err_msg'))
-<p class="text-danger">{{ session('err_msg') }}</span>
+<span class="text-danger">{{ session('err_msg') }}</span>
 @endif
 <div class="main__container">
   <table class="issue__list">
     <tr>
-      <th>目標</th>
-      <th>現状</th>
-      <th>課題</th>
-      <th>アクション</th>
-      <th>期限</th>
-      <th></th>
-      <th></th>
+      <th class="width__goal">目標</th>
+      <th class="width__now">現状</th>
+      <th class="width__why">課題</th>
+      <th class="width__action">アクション</th>
+      <th class="width__deadline">期限</th>
+      <th class="width__edit"></th>
+      <th class="width__delete"></th>
     </tr>
     @foreach($issues as $issue)
     <tr>
