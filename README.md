@@ -1,61 +1,54 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Why Issue
+「課題」と「状況」を整理するアプリケーションです。
+http://polar-chamber-46255.herokuapp.com/
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+# 概要
+予算が達成しない、勉強が続かない、、
+これは課題でしょうか？状況でしょうか？
+課題を解決するツールは様々ありますが、
+本アプリケーションはそもそもの「課題」をしっかり抽出するサポートをしてくれます。
+課題と状況をしっかり分けれて考えなければ正しい改善アクションが見えてきません。
 
-## About Laravel
+##　デモ
+フォームに答えていくと新しいフォームが現れます。
+[![Image from Gyazo](https://i.gyazo.com/50be486c84219effdd3beb1b9e7c4967.gif)](https://gyazo.com/50be486c84219effdd3beb1b9e7c4967)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+投稿すると一覧画面で管理ができます。
+[![Image from Gyazo](https://i.gyazo.com/edc53cdf3a9f7cf647edc5cdac51d2e5.gif)](https://gyazo.com/edc53cdf3a9f7cf647edc5cdac51d2e5)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+# 機能
+* フォーム入力による課題の作成
+* 登録した課題の詳細表示
+* 課題の編集
+* 課題の削除
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+# 使い方
+1. TOP画面（フォーム）から質問に返答
+1. 一つの回答が終わりましたら入力欄からフォーカスを外すと
+　　新しいフォームが出現
+1. 期限を設定すると投稿ボタンが出現
+1. 投稿をするとリスト画面に遷移
+1. 登録した「目標」はリンクとなり、選択で詳細画面に遷移
+1. リストの編集ボタンで編集が可能
+1. リストの削除ボタンで削除が可能
 
-## Learning Laravel
+# 技術
+* PHP : 7.3.11
+* Laravel Framework : 8.6.0
+* DB操作 : mysql/14.14
+* フロント制御 :Vue.js/2.5.17
+* インフラ : heroku/7.44.0
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+# DB設計
+## issuesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|goal|string|null: false, MAX:40|
+|now|string|null: false, MAX:40|
+|why|string|null: false, MAX:70|
+|action|string|null: false, MAX:70|
+|deadline|date|null: false|
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+# ライセンス
+This project is licensed free.  
+ご自由にご利用ください
