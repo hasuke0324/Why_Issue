@@ -1,5 +1,6 @@
 # Why Issue
 「課題」と「状況」を整理するアプリケーションです。
+
 http://polar-chamber-46255.herokuapp.com/
 
 # 概要
@@ -9,7 +10,7 @@ http://polar-chamber-46255.herokuapp.com/
 本アプリケーションはそもそもの「課題」をしっかり抽出するサポートをしてくれます。
 課題と状況をしっかり分けれて考えなければ正しい改善アクションが見えてきません。
 
-##　デモ
+## デモ
 フォームに答えていくと新しいフォームが現れます。
 [![Image from Gyazo](https://i.gyazo.com/50be486c84219effdd3beb1b9e7c4967.gif)](https://gyazo.com/50be486c84219effdd3beb1b9e7c4967)
 
