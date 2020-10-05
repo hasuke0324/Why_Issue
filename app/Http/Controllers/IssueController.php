@@ -117,6 +117,8 @@ class IssueController extends Controller
      */
     public function exeDelete($id)
     {
+        $issue = Issue::find($id);
+        
         if (empty($id)) {
             \Session::flash('err_msg', 'データがありません');
             return redirect(route('lists'));
