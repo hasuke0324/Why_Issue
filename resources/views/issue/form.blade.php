@@ -48,9 +48,9 @@
                         v-on:keydown.enter.exact.prevent
                     >
                 @if ($errors->has('now'))
-                    <div class="text-danger">
+                    <span class="text-danger">
                         {{ $errors->first('now') }}
-                    </div>
+                    </span>
                 @endif
                 <span id="inputlength2">0/40</spn>
             </div>
@@ -74,9 +74,9 @@
                         v-on:keydown.enter.exact.prevent
                     >
                 @if ($errors->has('why'))
-                    <div class="text-danger">
+                    <span class="text-danger">
                         {{ $errors->first('why') }}
-                    </div>
+                    </span>
                 @endif
                 <span id="inputlength3">0/70</spn>
             </div>
@@ -89,7 +89,7 @@
                         class="form__control"
                         value="{{ old('action') }}"
                         type="text"
-                        onkeyup="ShowLength3(value);"
+                        onkeyup="ShowLength4(value);"
                         maxlength="70"
                         placeholder="（例）お客様に日時指定で面談日を提案、18時以降は豆腐しか食べないetc"
                         autocomplete="off"
@@ -97,9 +97,9 @@
                         v-on:keydown.enter.exact.prevent
                     >
                 @if ($errors->has('action'))
-                    <div class="text-danger">
+                    <span class="text-danger">
                         {{ $errors->first('action') }}
-                    </div>
+                    </span>
                 @endif
                 <span id="inputlength4">0/70</spn>
             </div>
@@ -116,9 +116,9 @@
                     v-on:keydown.enter.exact.prevent
                 >
                 @if ($errors->has('deadline'))
-                    <div class="text-danger">
+                    <span class="text-danger">
                         {{ $errors->first('deadline') }}
-                    </div>
+                    </span>
                 @endif
             </div>
             <div class="btn" v-show="setBtn">
