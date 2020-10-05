@@ -26,6 +26,7 @@
       <form method="POST" action="{{ route('delete', $issue->id) }}" onSubmit="return checkDelete()">
       @csrf
       <td><button type="submit" class="btn__delete" onclick=>削除</button></td>
+      </form>
     </tr>
     @endforeach
   </table>
