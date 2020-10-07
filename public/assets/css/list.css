@@ -1,16 +1,17 @@
 /* 共通部分 */
 header {
-  background-color: #444444;
+  background-color: #4169E1;
   height: 8vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 60px;
+  box-shadow: 0px 10px 10px -9px rgba(0,0,0,0.5);
 }
 h1 {
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 20px;
   color: #f8fafc;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 a {
   text-decoration: none;
@@ -26,6 +27,8 @@ a {
 }
 .header__link {
   margin-left: 30px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 8px;
 }
 main {
   position: relative;
@@ -41,7 +44,8 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #444444;
+  background-color: #4169E1;
+  ;
   height: 36px;
   text-align: center;
   line-height: 36px;
@@ -90,6 +94,7 @@ footer {
   text-decoration: none;
   cursor: pointer;
   cursor: hand;
+  box-shadow: 1px 1px 3px gray;
 }
 .btn__delete {
   background-color: #cccccc;
@@ -105,6 +110,7 @@ footer {
   text-decoration: none;
   cursor: pointer;
   cursor: hand;
+  box-shadow: 1px 1px 3px gray;
 }
 /* detail部分 */
 .detail__list {
@@ -178,6 +184,7 @@ input {
   box-sizing: border-box;
   overflow: hidden;
   text-decoration: none;
+  box-shadow: 1px 1px 3px gray;
 }
 .btn__submit {
   margin-left: 20px;
@@ -193,6 +200,7 @@ input {
   text-decoration: none;
   cursor: pointer;
   cursor: hand;
+  box-shadow: 1px 1px 3px gray;
 }
 /* エラ〜メッセージ */
 .text-danger {
