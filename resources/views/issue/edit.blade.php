@@ -25,7 +25,9 @@
                         {{ $errors->first('goal') }}
                     </span>
                 @endif
-                <span id="inputlength1">0/40</span>
+                <span id="inputlength1">
+                  {{ mb_strlen($issue->goal) }}/40
+                </span>
             </div>
             <div class="form__group">
                 <h3>それに対して現状は？</h3>
@@ -51,7 +53,9 @@
                         {{ $errors->first('now') }}
                     </span>
                 @endif
-                <span id="inputlength2">0/40</spn>
+                <span id="inputlength2">
+                  {{ mb_strlen($issue->now)}}/40
+                </spn>
             </div>
             <div class="form__group">
                 <h3>目標と現状の差はなぜ生まれる？</h3>
@@ -77,7 +81,9 @@
                         {{ $errors->first('why') }}
                     </span>
                 @endif
-                <span id="inputlength3">0/70</spn>
+                <span id="inputlength3">
+                  {{ mb_strlen($issue->why) }}/70
+                </spn>
             </div>
             <div class="form__group">
                 <h3>その差を埋めるための行動とは？</h3>
@@ -98,7 +104,8 @@
                         {{ $errors->first('action') }}
                     </span>
                 @endif
-                <span id="inputlength4">0/70</spn>
+                <span id="inputlength4">
+                  {{ mb_strlen($issue->action) }}/70</spn>
             </div>
             <div class="form__group">
             <h3>いつまでに目標達成？</h3>
