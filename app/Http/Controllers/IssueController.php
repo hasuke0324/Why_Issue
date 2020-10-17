@@ -60,7 +60,7 @@ class IssueController extends Controller
             abort(500);
         }
 
-        \Session::flash('err_msg', 'アクションを登録しました');
+        \Session::flash('err_msg', '目標を登録しました');
         return redirect(route('lists'));
     }
     /**
