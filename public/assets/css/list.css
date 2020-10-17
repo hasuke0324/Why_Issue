@@ -15,20 +15,75 @@ h1 {
 }
 a {
   text-decoration: none;
-  color: #f8fafc;
+  color: #444444;
   font-size: 15px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .show__link {
   color: #3490dc;
 }
 .header__links {
   list-style: none;
-  display: flex;
 }
 .header__link {
-  margin-left: 30px;
+  margin: 10%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 8px;
+}
+/* ナビゲーション */
+.nav-unshown {
+  display: none;
+}
+#nav-open {
+  display: flex;
+  height: 6vh;
+  width: 60%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 100;
+  cursor: pointer;
+}
+#nav-open span,
+#nav-open span:before,
+#nav-open span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background: #f8fafc;
+  transition: 0.5s;
+  position: absolute;
+}
+#nav-open span:before {
+  bottom: 8px;
+}
+#nav-open span:after {
+  top: 8px;
+}
+#nav-check:checked ~ #nav-open span {
+  background: rgba(255, 255, 255, 0);
+}
+#nav-check:checked ~ #nav-open span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+#nav-check:checked ~ #nav-open span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+.nav__content {
+  width: 30%;
+  height: 86vh;
+  position: fixed;
+  top: 8vh;
+  left: 100%;
+  z-index: 99;
+  background: #f8fafc;
+  transition: .5s;
+}
+#nav-check:checked ~ .nav__content {
+  left: 70%;
 }
 main {
   position: relative;
