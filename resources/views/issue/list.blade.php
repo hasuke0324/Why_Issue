@@ -21,7 +21,7 @@
       <td nowrap class="list__now">{{ $issue->now }}</td>
       <td nowrap class="list__why">{{ $issue->why }}</td>
       <td nowrap class="list__action">{{ $issue->action }}</td>
-      <td>{{ $issue->deadline }}</td>
+      <td nowrap class="list__deadline">{{ $issue->deadline }}</td>
       <td><button type="button" class="btn__edit" onclick="location.href='/issue/edit/{{ $issue->id }}'">編集</button></td>
       <form method="POST" action="{{ route('delete', $issue->id) }}" onSubmit="return checkDelete()">
       @csrf
