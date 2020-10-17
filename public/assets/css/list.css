@@ -169,6 +169,15 @@ footer {
   cursor: hand;
   box-shadow: 1px 1px 3px gray;
 }
+/* スマホlist部分 */
+@media screen and (max-width:970px) {
+  .width__now, .width__why, .width__action, .width__deadline {
+    display: none;
+  }
+  .list__now, .list__why, .list__action, .list__deadline{
+    display: none;
+  }
+}
 /* detail部分 */
 .detail__list {
   position: absolute;
