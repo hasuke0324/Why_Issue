@@ -7,7 +7,6 @@
   <title>@yield('title')</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
   <link rel="stylesheet" href="{{asset('/assets/css/list.css')}}">
-  <!-- <script src="/js/app.js" defer></script> -->
 </head>
 <body>
   <header>
